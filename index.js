@@ -220,7 +220,21 @@ class Airplane {
          return `${student.name} debugs ${this.name}'s code on ${subject}`;
      }
  }
- 
+
+const tom = new Student({
+    name: 'Tom',
+    age: 27,
+    location: 'Galifrey',
+    previousBackground: 'unknown',
+    className: 'CS132',
+    favSubjects: ['HTML', 'CSS', 'JS']
+});
+
+console.log(tom);
+console.log(tom.listSubjects());
+console.log(tom.PRAssignment('Arrays 101'));
+console.log(tom.sprintChallenge('Javascript Fundamentals'));
+
   /*
     STRETCH PROBLEM (no tests!)
       - Extend the functionality of the Student by adding a prop called grade and setting it equal to a number between 1-100.
