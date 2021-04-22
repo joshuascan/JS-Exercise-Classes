@@ -183,7 +183,7 @@ class Airplane {
          this.favSubjects = attr.favSubjects;
      }
      listSubjects() {
-         return this.favSubjects.toString();
+         return `Loving ${this.favSubjects.join(", ")}!`;
      }
      PRAssignment(subject) {
          return `${this.name} has submitted a PR for ${subject}`;
