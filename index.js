@@ -87,16 +87,23 @@ class Airplane {
     drive(distance) {
         if (this.tank > 0) {
             if (this.tank * this.milesPerGallon > distance) {
-            this.odometer += distance;
-            this.tank = (this.tank * this.milesPerGallon - distance) / this.milesPerGallon;
+                this.odometer += distance;
+                this.tank = (this.tank * this.milesPerGallon - distance) / this.milesPerGallon;
             } else {
                 this.odometer += this.tank * this.milesPerGallon;
                 this.tank = 0;
-            }
-            return `I ran out of fuel at ${this.odometer} miles!`;
+                return `I ran out of fuel at ${this.odometer} miles!`;
+                }
             }
         }
     }
+
+    // const jerry = new Car('VW', 10);
+
+    // jerry.fill(10);
+
+    // console.log(jerry.drive(60));
+    // console.log(jerry.drive(100));
 
   /*
     TASK 3
@@ -110,8 +117,16 @@ class Airplane {
           + Speaking should return a phrase `Hello my name is {name}, I am from {location}`.
           + {name} and {location} of course come from the instance's own properties.
   */
+
  class Lambdasian {
-    
+    constructor(object) {
+        this.name = object.name;
+        this.age = object.age;
+        this.location = object.location;
+    }
+    speak() {
+        return `Hello my name is ${this.name}, I am from ${this.location}`;
+    }
   }
   
   /*
